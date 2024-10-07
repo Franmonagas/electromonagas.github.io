@@ -123,18 +123,27 @@ h2 {
 /* Proyectos */
 .proyectos-grid {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    overflow: hidden; /* Oculta las imágenes fuera del contenedor */
+    width: 100%; /* Asegura que el contenedor tome el ancho total */
+    position: relative;
 }
 
 .proyecto {
-    margin: 10px;
+    min-width: 100%; /* Cada imagen ocupa todo el ancho del contenedor */
+    transition: transform 0.5s ease-in-out; /* Transición suave entre imágenes */
 }
 
 .proyecto-img {
-    width: 250px;
-    height: 150px;
+    width: 100%; /* La imagen debe ocupar todo el ancho del contenedor del proyecto */
+    height: auto; /* Mantener la proporción de la imagen */
     border-radius: 10px;
+}
+
+/* Para centrar el texto debajo de las imágenes */
+.proyecto p {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
 }
 
 /* FAQ */
