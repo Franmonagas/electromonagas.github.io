@@ -39,27 +39,35 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert('Hubo un problema con la conexión. Inténtalo más tarde.');
     });
 });
-const proyectos = document.querySelectorAll('.proyecto');
-let proyectoActual = 0;
+const track = document.querySelector('.carousel-track');
+const prevButton = document.querySelector('.prev-btn');
+const nextButton = document.querySelector('.next-btn');
 
-document.getElementById('flecha-prev').addEventListener('click', () => {
-    // Ocultar el proyecto actual
-    proyectos[proyectoActual].classList.remove('activo');
+let currentIndex = 0; // Controla la imagen actual
+const totalSlides = track.children.length; // Número total de imágenes
 
-    // Decrementar el índice
-    proyectoActual = (proyectoActual === 0) ? proyectos.length - 1 : proyectoActual - 1;
+// Función para mover el carrusel
+function moveToSlide(index) {
+    const amountToMove = -index * 100; // Mueve en base al 100% del ancho del carrusel
+    track.style.transform = `translateX(${amountToMove}%)`;
+}
 
-    // Mostrar el nuevo proyecto
-    proyectos[proyectoActual].classList.add('activo');
+// Evento de clic para el botón "Siguiente"
+nextButton.addEventListener('click', () => {
+    if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0; // Volver al inicio si está en la última imagen
+    }
+    moveToSlide(currentIndex);
 });
 
-document.getElementById('flecha-next').addEventListener('click', () => {
-    // Ocultar el proyecto actual
-    proyectos[proyectoActual].classList.remove('activo');
-
-    // Incrementar el índice
-    proyectoActual = (proyectoActual === proyectos.length - 1) ? 0 : proyectoActual + 1;
-
-    // Mostrar el nuevo proyecto
-    proyectos[proyectoActual].classList.add('activo');
+// Evento de clic para el botón "Anterior"
+prevButton.addEventListener('click', () => {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = totalSlides - 1; // Volver al final si está en la primera imagen
+    }
+    moveToSlide(currentIndex);
 });
