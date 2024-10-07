@@ -171,8 +171,9 @@ h2 {
 
 .proyecto-img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
+    max-width: 500px;  /* El mismo ancho máximo */
+    height: 300px;     /* Altura alargada */
+    object-fit: cover; /* Ajusta la imagen para llenar el espacio y recorta si es necesario */
     border-radius: 10px;
     margin-bottom: 15px;
 }
