@@ -13,64 +13,138 @@ body {
 }
 
 /* Encabezado */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color: #004aad;
+    background: linear-gradient(135deg, #004aad, #0072ff);
     color: white;
     padding: 20px 0;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
 }
 
-header h1 {
-    font-size: 36px;
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaciado entre el logo y el contenido */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo img {
+    width: 100px;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    border: 3px solid transparent; /* Borde transparente por defecto */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.logo img:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente blanco */
+    border: 3px solid #ff9800; /* Borde de color al pasar el mouse */
+}
+
+.header-content {
+    text-align: center; /* Mantener el texto centrado */
+    flex-grow: 1; /* Permitir que el contenido del encabezado tome el espacio restante */
+}
+
+.header-title {
+    font-size: 48px;
     margin: 0;
+    font-weight: 700;
 }
 
-header p {
-    font-size: 18px;
+.header-description {
+    font-size: 20px;
     margin: 10px 0 20px;
 }
 
-.btn {
+.header-button {
     background-color: #ff9800;
     color: white;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.btn:hover {
+.header-button:hover {
     background-color: #e68900;
+    transform: scale(1.05);
 }
 
 /* Navegación */
-nav {
+.navbar {
     background-color: #333;
     padding: 10px 0;
     text-align: center;
 }
 
-nav ul {
+.nav-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-nav li {
+.nav-list li {
     display: inline;
-    margin: 0 15px;
+    margin: 0 20px;
 }
 
-nav a {
+.nav-list a {
     color: white;
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
-nav a:hover {
-    text-decoration: underline;
+.nav-list a:hover {
+    color: #ff9800; /* Cambiar el color al pasar el mouse */
+}
+
+/* Sección de bienvenida */
+#inicio {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portada-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0072ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5; /* Cambiar el color del botón al pasar el mouse */
 }
 
 /* Secciones */
