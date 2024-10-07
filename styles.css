@@ -121,26 +121,34 @@ h2 {
 }
 
 /* Proyectos */
+#proyectos {
+    background-color: #f0f0f0; /* Fondo gris claro para la sección */
+    padding: 60px 0;
+}
+
 .proyectos-grid {
     display: flex;
     overflow: hidden; /* Oculta las imágenes fuera del contenedor */
-    width: 100%; /* El contenedor sigue tomando el ancho total */
+    width: 100%; /* Asegura que el contenedor tome el ancho total */
     position: relative;
-    justify-content: center; /* Para centrar el contenido */
+    justify-content: flex-start; /* Alinea los elementos hacia la izquierda */
 }
 
 .proyecto {
     min-width: 33.33%; /* Cada imagen ocupa un tercio del ancho del contenedor */
     transition: transform 0.5s ease-in-out; /* Transición suave entre imágenes */
     padding: 10px; /* Agregar espacio alrededor de las imágenes */
-    box-sizing: border-box; /* Asegura que el padding se incluya en el ancho */
+    box-sizing: border-box; /* Incluir padding en el ancho total */
+    background-color: white; /* Fondo blanco para resaltar la imagen */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para mayor visibilidad */
 }
 
 .proyecto-img {
-    width: 100%; /* Imagen ajustada al ancho del contenedor del proyecto */
-    height: 150px; /* Altura ajustada */
-    object-fit: cover; /* Recorta la imagen manteniendo la proporción */
-    border-radius: 10px;
+    width: 100%; /* La imagen ocupa todo el ancho disponible */
+    height: 100px; /* Ajuste de altura para hacer las imágenes más alargadas */
+    object-fit: cover; /* Ajusta la imagen para que mantenga la proporción sin deformarse */
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
 }
 
 /* Para centrar el texto debajo de las imágenes */
