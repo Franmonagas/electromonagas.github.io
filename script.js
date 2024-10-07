@@ -40,34 +40,37 @@ document.getElementById('contact-form').addEventListener('submit', function(even
     });
 });
 const track = document.querySelector('.carousel-track');
+const slides = Array.from(track.children);
 const prevButton = document.querySelector('.prev-btn');
 const nextButton = document.querySelector('.next-btn');
 
-let currentIndex = 0; // Controla la imagen actual
-const totalSlides = track.children.length; // Número total de imágenes
+let currentSlide = 0; // Control del índice actual
 
 // Función para mover el carrusel
-function moveToSlide(index) {
-    const amountToMove = -index * 100; // Mueve en base al 100% del ancho del carrusel
-    track.style.transform = `translateX(${amountToMove}%)`;
+function updateCarouselPosition() {
+    const slideWidth = slides[0].getBoundingClientRect().width; // Obtiene el ancho de cada slide
+    const newPosition = -currentSlide * slideWidth;
+    track.style.transform = `translateX(${newPosition}px)`; // Mueve el carrusel
 }
 
-// Evento de clic para el botón "Siguiente"
+// Botón siguiente
 nextButton.addEventListener('click', () => {
-    if (currentIndex < totalSlides - 1) {
-        currentIndex++;
+    if (currentSlide < slides.length - 1) {
+        currentSlide++;
     } else {
-        currentIndex = 0; // Volver al inicio si está en la última imagen
+        currentSlide = 0; // Vuelve al inicio si está en el último slide
     }
-    moveToSlide(currentIndex);
+    updateCarouselPosition();
 });
 
-// Evento de clic para el botón "Anterior"
+// Botón anterior
 prevButton.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
+    if (currentSlide > 0) {
+        currentSlide--;
     } else {
-        currentIndex = totalSlides - 1; // Volver al final si está en la primera imagen
+        currentSlide = slides.length - 1; // Va al último slide si está en el primero
     }
-    moveToSlide(currentIndex);
+    updateCarouselPosition();
 });
+
+// Ajuste de tamaño si la ventana cambia
