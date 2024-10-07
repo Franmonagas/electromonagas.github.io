@@ -39,3 +39,22 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert('Hubo un problema con la conexión. Inténtalo más tarde.');
     });
 });
+// Seleccionar elementos del carrusel
+const proyectosGrid = document.querySelector('.proyectos-grid');
+const proyectos = document.querySelectorAll('.proyecto');
+
+// Variables de control del carrusel
+let currentIndex = 0;
+const totalProyectos = proyectos.length;
+
+// Función para cambiar a la siguiente imagen
+function nextProyecto() {
+    // Calcular el siguiente índice
+    currentIndex = (currentIndex + 1) % totalProyectos;
+    
+    // Aplicar la transformación para mostrar el siguiente proyecto
+    proyectosGrid.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Establecer intervalo para que cambie cada 3 segundos
+setInterval(nextProyecto, 3000);
