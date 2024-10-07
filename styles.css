@@ -13,12 +13,6 @@ body {
 }
 
 /* Encabezado */
-body {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 header {
     background: linear-gradient(135deg, #004aad, #0072ff);
     color: white;
@@ -29,29 +23,39 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Espaciado entre el logo y el contenido */
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+}
+
+/* Logo */
+.logo {
+    position: absolute;
+    top: 10px; /* Ajusta la posición vertical */
+    left: 10px; /* Ajusta la posición horizontal */
+    z-index: 10; /* Para asegurarte de que el logo se superponga al contenido */
 }
 
 .logo img {
-    width: 100px;
+    width: 80px; /* Tamaño del logo ajustado para pantallas más pequeñas */
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    border: 3px solid transparent; /* Borde transparente por defecto */
-    border-radius: 5px; /* Bordes redondeados */
+    border: 3px solid transparent;
+    border-radius: 5px;
 }
 
 .logo img:hover {
-    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo ligeramente blanco */
-    border: 3px solid #ff9800; /* Borde de color al pasar el mouse */
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 3px solid #ff9800;
 }
 
+/* Encabezado de contenido */
 .header-content {
-    text-align: center; /* Mantener el texto centrado */
-    flex-grow: 1; /* Permitir que el contenido del encabezado tome el espacio restante */
+    text-align: center;
+    flex-grow: 1;
 }
 
 .header-title {
@@ -109,7 +113,7 @@ header {
 }
 
 .nav-list a:hover {
-    color: #ff9800; /* Cambiar el color al pasar el mouse */
+    color: #ff9800;
 }
 
 /* Sección de bienvenida */
@@ -117,11 +121,6 @@ header {
     text-align: center;
     padding: 40px 20px;
     background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .portada-img {
@@ -144,7 +143,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #005bb5; /* Cambiar el color del botón al pasar el mouse */
+    background-color: #005bb5;
 }
 
 /* Secciones */
@@ -189,16 +188,16 @@ h2 {
 
 .servicio-img {
     width: 100%;
-    height: 200px; /* Altura fija para todas las imágenes */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    border-radius: 10px; /* Bordes redondeados */
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
-/* Estilos del contenedor del carrusel */
+/* Carrusel */
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 100%; /* El carrusel ocupará el ancho completo del contenedor */
+    max-width: 100%;
     margin: 0 auto;
     overflow: hidden;
 }
@@ -210,20 +209,20 @@ h2 {
 
 .carousel-track {
     display: flex;
-    transition: transform 0.5s ease-in-out; /* Animación suave al mover las imágenes */
-    width: 100%; /* Importante para que todas las imágenes ocupen el ancho total */
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
 }
 
 .proyecto {
-    min-width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
+    min-width: 100%;
     text-align: center;
-    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
+    box-sizing: border-box;
 }
 
 .proyecto-img {
     width: 100%;
-    height: 450px; /* Ajusta la altura aquí según prefieras */
-    object-fit: cover; /* La imagen se ajusta y rellena sin distorsionarse */
+    height: 450px;
+    object-fit: cover;
     border-radius: 10px;
 }
 
@@ -239,7 +238,7 @@ h2 {
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
-    z-index: 10; /* Para que siempre se muestren por encima de las imágenes */
+    z-index: 10;
 }
 
 .prev-btn {
@@ -253,6 +252,7 @@ h2 {
 .prev-btn:hover, .next-btn:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
+
 /* FAQ */
 .faq-item {
     background-color: #f9f9f9;
@@ -272,7 +272,6 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-
 }
 
 /* Sección de Contacto */
@@ -297,7 +296,7 @@ footer {
     margin-bottom: 40px;
 }
 
-/* Estilos del formulario */
+/* Formulario de contacto */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -310,79 +309,30 @@ footer {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Filas de formulario */
-.form-row {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.contact-form label {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-    font-size: 16px;
-}
-
-.contact-form input, 
-.contact-form textarea {
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-    width: 100%;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-.contact-form input:focus, 
-.contact-form textarea:focus {
-    border-color: #004aad;
-    box-shadow: 0 0 5px rgba(0, 74, 173, 0.5);
-    outline: none;
-}
-
-.contact-form button {
-    background-color: #004aad;
-    color: white;
-    padding: 15px;
-    font-size: 18px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-    background-color: #003d99;
-}
-
-.contact-form .form-row .form-group:first-child {
-    margin-right: 10px;
-}
-
-.contact-form .form-row .form-group:last-child {
-    margin-left: 10px;
-}
-
-.contact-form i {
-    margin-right: 10px;
-    color: #ff9800;
-}
-
-/* Estilos para dispositivos móviles */
+/* Responsive para el logo y el contenido */
 @media screen and (max-width: 768px) {
-    .form-row {
-        flex-direction: column;
+    .logo img {
+        width: 60px; /* Ajustar el tamaño del logo para pantallas más pequeñas */
     }
 
-    .form-group {
-        margin-bottom: 20px;
+    .header-title {
+        font-size: 36px; /* Reducir el tamaño del título en móviles */
+    }
+
+    .header-description {
+        font-size: 16px;
+    }
+
+    .header-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .header-container {
+        flex-direction: column; /* Cambiar el layout a columnas */
+    }
+
+    .navbar {
+        font-size: 14px; /* Ajustar el tamaño de la navegación */
     }
 }
