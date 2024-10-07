@@ -124,30 +124,32 @@ h2 {
 .carousel {
     position: relative;
     width: 100%;
-    max-width: 1000px; /* Ajustar este valor si quieres un límite de tamaño */
+    max-width: 100%; /* El carrusel ocupará el ancho completo del contenedor */
     margin: 0 auto;
     overflow: hidden;
 }
 
 .carousel-track-container {
     overflow: hidden;
+    position: relative;
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s ease-in-out; /* Animación suave al mover las imágenes */
+    width: 100%; /* Importante para que todas las imágenes ocupen el ancho total */
 }
 
 .proyecto {
     min-width: 100%; /* Cada imagen ocupa el 100% del ancho del carrusel */
     text-align: center;
-    padding: 10px; /* Agregar algo de espacio alrededor de las imágenes */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho total */
 }
 
 .proyecto-img {
     width: 100%;
-    height: 400px; /* Puedes ajustar la altura según tu preferencia */
-    object-fit: cover; /* Asegura que la imagen se ajuste sin distorsionarse */
+    height: 450px; /* Ajusta la altura aquí según prefieras */
+    object-fit: cover; /* La imagen se ajusta y rellena sin distorsionarse */
     border-radius: 10px;
 }
 
@@ -163,6 +165,7 @@ h2 {
     cursor: pointer;
     font-size: 24px;
     border-radius: 50%;
+    z-index: 10; /* Para que siempre se muestren por encima de las imágenes */
 }
 
 .prev-btn {
