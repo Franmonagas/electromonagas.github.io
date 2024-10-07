@@ -13,63 +13,72 @@ body {
 }
 
 /* Encabezado */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 header {
-    background-color: #004aad;
+    background: linear-gradient(135deg, #004aad, #0072ff);
     color: white;
-    padding: 20px 0; /* Espacio alrededor del encabezado */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px 0;
+    position: relative;
 }
 
 .header-container {
-    display: flex; /* Utilizar flexbox para alinear logo y contenido */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    max-width: 1200px; /* Limitar el ancho total */
-    margin: 0 auto; /* Centrar en la página */
-    padding: 0 20px; /* Espacio interno */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
 }
 
 .logo img {
-    width: 100px; /* Ajustar el tamaño del logo */
-    transition: transform 0.3s; /* Animación al pasar el mouse */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5); /* Sombra del logo */
-    margin-right: 20px; /* Espaciado entre el logo y el contenido */
+    width: 100px;
+    transition: transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    margin-right: 20px;
 }
 
 .header-content {
-    text-align: center; /* Centrar texto */
+    text-align: center;
 }
 
 .header-title {
-    font-size: 48px; /* Tamaño de la fuente del título */
+    font-size: 48px;
     margin: 0;
+    font-weight: 700;
 }
 
 .header-description {
-    font-size: 20px; /* Tamaño de la fuente de la descripción */
-    margin: 10px 0 20px; /* Espaciado ajustado */
+    font-size: 20px;
+    margin: 10px 0 20px;
 }
 
 .header-button {
     background-color: #ff9800;
     color: white;
-    padding: 15px 30px; /* Espaciado del botón */
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Transiciones suaves */
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .header-button:hover {
-    background-color: #e68900; /* Cambio de color al pasar el mouse */
-    transform: scale(1.05); /* Efecto de aumento al pasar el mouse */
+    background-color: #e68900;
+    transform: scale(1.05);
 }
 
 /* Navegación */
 .navbar {
     background-color: #333;
-    padding: 15px 0; /* Ajuste del padding para la navegación */
+    padding: 10px 0;
     text-align: center;
 }
 
@@ -81,18 +90,54 @@ header {
 
 .nav-list li {
     display: inline;
-    margin: 0 20px; /* Espaciado entre los elementos del menú */
+    margin: 0 20px;
 }
 
 .nav-list a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 18px; /* Aumentar el tamaño de la fuente */
+    font-size: 18px;
+    transition: color 0.3s;
 }
 
 .nav-list a:hover {
-    text-decoration: underline;
+    color: #ff9800; /* Cambiar el color al pasar el mouse */
+}
+
+/* Sección de bienvenida */
+#inicio {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.portada-img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #0072ff;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #005bb5; /* Cambiar el color del botón al pasar el mouse */
 }
 /* Secciones */
 section {
