@@ -386,3 +386,53 @@ footer {
         margin-bottom: 20px;
     }
 }
+
+* Añadiendo sombra y efectos en el texto */
+.header-title {
+    font-size: 48px;
+    margin: 0;
+    font-weight: 700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.header-description {
+    font-size: 20px;
+    margin: 10px 0 20px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Efecto hover en la barra de navegación */
+.nav-list a:hover {
+    color: #ff9800; /* Cambiar el color al pasar el mouse */
+    text-decoration: underline; /* Subrayar el texto al pasar el mouse */
+}
+
+/* Efecto al cargar */
+.header-content {
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Aparece gradualmente */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #ff9800;
+}
