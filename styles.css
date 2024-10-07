@@ -6,62 +6,55 @@ body {
     background-color: #f0f0f0;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 /* Encabezado */
 header {
-    background: linear-gradient(135deg, #004aad 0%, #007bff 100%); /* Fondo degradado */
+    background: linear-gradient(to right, #004aad, #0077ff);
     color: white;
-    padding: 60px 0; /* Espacio superior e inferior aumentado */
+    padding: 40px 0;
     text-align: center;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .header-container {
-    max-width: 800px; /* Max width para el contenedor del encabezado */
-    margin: 0 auto; /* Centrar el contenedor */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 header h1 {
-    font-size: 48px; /* Aumentar tamaño de la fuente */
+    font-size: 42px;
     margin: 0;
-    font-family: 'Roboto', sans-serif; /* Fuente personalizada */
     text-transform: uppercase; /* Texto en mayúsculas */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
+}
+
+header h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    font-weight: 300; /* Peso de fuente más ligero para el eslogan */
+    color: #ff9800; /* Color del eslogan */
 }
 
 header p {
-    font-size: 20px; /* Aumentar tamaño de la fuente */
-    margin: 10px 0 30px; /* Margen superior e inferior */
-    font-weight: 300; /* Peso de fuente ligero */
+    font-size: 18px;
+    margin: 10px 0 20px;
+    opacity: 0.8; /* Opacidad para un efecto más suave */
 }
 
-/* Sección de bienvenida */
-.welcome-section {
-    background-color: #f9f9f9; /* Color de fondo claro */
-    padding: 60px 0;
-    text-align: center;
+.btn {
+    background-color: #ff9800;
+    color: white;
+    padding: 15px 30px; /* Botón más grande */
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s; /* Transición para la transformación */
 }
 
-.welcome-section h2 {
-    font-size: 32px; /* Tamaño del título */
-    margin-bottom: 20px; /* Margen inferior */
-    color: #004aad; /* Color del texto */
-}
-
-.welcome-section p {
-    font-size: 18px; /* Tamaño de texto */
-    color: #555; /* Color del texto */
-    line-height: 1.6; /* Interlineado */
-    margin-bottom: 30px; /* Margen inferior */
-}
-
-.portada-img {
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra de la imagen */
+.btn:hover {
+    background-color: #e68900;
+    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
 }
 
 /* Botón mejorado */
