@@ -6,77 +6,44 @@ body {
     background-color: #f0f0f0;
 }
 
-/* Encabezado */
-header {
-    background: linear-gradient(to right, #004aad, #0077ff);
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
-}
-
-.header-container {
+.container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Encabezado */
+header {
+    background-color: #004aad;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
-    font-size: 42px;
+    font-size: 36px;
     margin: 0;
-    text-transform: uppercase; /* Texto en mayúsculas */
-    letter-spacing: 2px; /* Espaciado entre letras */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra en el texto */
-}
-
-header h2 {
-    font-size: 24px;
-    margin: 10px 0;
-    font-weight: 300; /* Peso de fuente más ligero para el eslogan */
-    color: #ff9800; /* Color del eslogan */
 }
 
 header p {
     font-size: 18px;
     margin: 10px 0 20px;
-    opacity: 0.8; /* Opacidad para un efecto más suave */
 }
 
 .btn {
     background-color: #ff9800;
     color: white;
-    padding: 15px 30px; /* Botón más grande */
+    padding: 10px 20px;
     border: none;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s; /* Transición para la transformación */
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
     background-color: #e68900;
-    transform: scale(1.05); /* Efecto de escala al pasar el ratón */
-}
-
-/* Botón mejorado */
-.btn {
-    background-color: #ff9800; /* Color de fondo del botón */
-    color: white; /* Color del texto */
-    padding: 15px 30px; /* Espaciado interior */
-    border: none;
-    border-radius: 25px; /* Bordes redondeados */
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.3s; /* Transición para cambios */
-}
-
-.btn:hover {
-    background-color: #e68900; /* Color del botón al pasar el mouse */
-    transform: translateY(-3px); /* Movimiento al pasar el mouse */
-}
-
-/* Agregar iconos a los botones en la sección de contacto */
-.btn i {
-    margin-right: 8px; /* Margen a la derecha del icono */
 }
 
 /* Navegación */
