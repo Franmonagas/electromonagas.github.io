@@ -29,7 +29,7 @@ header {
 .header-container {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinear hacia la izquierda */
+    justify-content: space-between; /* Espaciado entre el logo y el contenido */
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
@@ -39,7 +39,6 @@ header {
     width: 100px;
     transition: transform 0.3s, background-color 0.3s;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
     border: 3px solid transparent; /* Borde transparente por defecto */
     border-radius: 5px; /* Bordes redondeados */
 }
@@ -51,7 +50,8 @@ header {
 }
 
 .header-content {
-    text-align: left; /* Alinear el texto a la izquierda */
+    text-align: center; /* Mantener el texto centrado */
+    flex-grow: 1; /* Permitir que el contenido del encabezado tome el espacio restante */
 }
 
 .header-title {
