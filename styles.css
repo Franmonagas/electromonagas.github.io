@@ -170,10 +170,10 @@ h2 {
 }
 
 .proyecto-img {
-    width: 100%;
-    max-width: 500px;  /* El mismo ancho máximo */
-    height: 300px;     /* Altura alargada */
-    object-fit: cover; /* Ajusta la imagen para llenar el espacio y recorta si es necesario */
+    width: 100%;             /* Usamos el 100% del contenedor para que la imagen sea tan ancha como sea posible */
+    max-width: 700px;        /* Cambiamos el ancho máximo para alargar más la imagen */
+    height: 150px;           /* Mantener una altura relativamente pequeña */
+    object-fit: cover;       /* Mantener la proporción y recortar si es necesario */
     border-radius: 10px;
     margin-bottom: 15px;
 }
