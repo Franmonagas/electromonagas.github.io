@@ -1,3 +1,52 @@
+/* Barra superior con horario y enlace a Instagram */
+.top-bar {
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-bar p {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.top-bar a {
+    color: white;
+    font-size: 20px;
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.top-bar a:hover {
+    color: #ff9800;
+}
+
+/* Ajustes para el diseño general debido a la barra fija */
+body {
+    margin-top: 50px; /* Ajusta el espacio superior para la barra */
+}
+
+/* Responsive para la barra superior */
+@media screen and (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .top-bar p, .top-bar a {
+        padding: 5px;
+    }
+}
+
+
 /* Estilos generales */
 body {
     font-family: 'Roboto', sans-serif;
