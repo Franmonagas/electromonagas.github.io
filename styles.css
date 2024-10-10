@@ -1,51 +1,36 @@
-/* Barra superior con horario y enlace a Instagram */
+/* Barra superior */
 .top-bar {
-    background-color: #333;
-    color: white;
-    font-size: 14px;
-    padding: 10px;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.top-bar p {
-    margin: 0;
-    padding-left: 20px;
-}
-
-.top-bar a {
+    background-color: #333;
     color: white;
-    font-size: 20px;
-    padding-right: 20px;
-    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
-.top-bar a:hover {
+.opening-hours,
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.opening-hours i,
+.location i {
+    margin-right: 8px;
     color: #ff9800;
 }
 
-/* Ajustes para el diseño general debido a la barra fija */
-body {
-    margin-top: 50px; /* Ajusta el espacio superior para la barra */
+.instagram a {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
 }
 
-/* Responsive para la barra superior */
-@media screen and (max-width: 768px) {
-    .top-bar {
-        flex-direction: column;
-        font-size: 12px;
-    }
-    .top-bar p, .top-bar a {
-        padding: 5px;
-    }
+.instagram a:hover {
+    color: #ff9800;
 }
-
 
 /* Estilos generales */
 body {
@@ -67,8 +52,8 @@ header {
     color: white;
     padding: 20px 0;
     position: relative;
+    margin-top: 50px; /* Espacio para la barra superior */
 }
-
 .header-container {
     display: flex;
     align-items: center;
